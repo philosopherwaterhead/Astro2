@@ -1,0 +1,13 @@
+---
+import BasicLayout from "../layouts/BasicLayout.astro";
+const allPosts = await Astro.glob('../pages/obsidian/*.md');
+---
+<BasicLayout>
+  <body>
+    <h1>日記</h1>
+    日記。
+    <ul>
+        {allPosts.map((post) => <li><a href={post.url.slice(9)}>{post.frontmatter.title}</a></li>)}
+    </ul>
+  </body>
+</BasicLayout>
