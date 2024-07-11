@@ -1,0 +1,65 @@
+---
+import "../styles/global.css"
+---
+<html lang="ja">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/svg.svg" />
+		<meta name="viewport" content="width=1000" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Comph-notes</title>
+        <style>
+            nav {
+                list-style: none;
+                overflow: hidden;
+            }
+            nav li{
+                width: 140px;
+                text-align: center;
+                background-color: #8ebef2;
+                float: left;
+                height: 30px;
+                line-height: 30px;
+                margin-right: 2px;
+            }
+            nav li a{
+                text-decoration: none;
+                color: #000
+            }
+            hr{
+                border: none;
+                border-bottom: 1px solid #333;
+                margin: 0;
+            }
+            span.yukari{
+                color:purple
+            }
+            span.kiritan{
+                color:orange
+            }
+
+        </style>
+	</head>
+    <body>
+        <nav>
+            <!-- <a href="/">サイトトップ</a></li>
+            <li><a href="/smtop/">数理</a></li>
+            <li><a href="/lawstop/">法集</a></li> -->
+            <a href="/">サイトトップ</a>
+            <a href="/smtop/">数理</a>
+            <a href="/lawstop/">法集</a>
+            <a href="/obsidiantop/">日記</a>
+            <a href="/gallery/">代理近影集</a>
+        </nav>
+
+        <slot /><!-- ここにコンテンツが挿入されます -->
+
+        <footer>
+            <hr>
+            <small>
+                <p>外付け煮干　<a href="https://github.com/philosopherwaterhead/comphand">GitHub</a></p>
+            </small>
+        </footer>
+    </body>
+
+</html>
