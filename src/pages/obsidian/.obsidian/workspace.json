@@ -8,18 +8,43 @@
         "type": "tabs",
         "children": [
           {
-            "id": "4cf9fe1d22d2a1f5",
+            "id": "b2a401d64d079198",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Obsidian_test.md",
+                "file": "03. 人生.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "93445020ea32371d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "02. 兵器.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "cc82c1798ee5556e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "01. 百合.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Obsidian_test.md",
+                "file": "02. 兵器.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Obsidian_test.md",
+                "file": "02. 兵器.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Obsidian_test.md"
+                "file": "02. 兵器.md"
               }
             }
           }
@@ -146,9 +171,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4cf9fe1d22d2a1f5",
+  "active": "93445020ea32371d",
   "lastOpenFiles": [
-    "2022-08-08.md",
-    "Obsidian_test.md"
+    "01. 百合.md",
+    "03. 人生.md",
+    "02. 兵器.md",
+    "Obsidian_test.md",
+    "2022-08-08.md"
   ]
 }
