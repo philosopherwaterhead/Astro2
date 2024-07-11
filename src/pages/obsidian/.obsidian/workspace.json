@@ -8,43 +8,14 @@
         "type": "tabs",
         "children": [
           {
-            "id": "b2a401d64d079198",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "03. 人生.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "93445020ea32371d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "01. 百合.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "cc82c1798ee5556e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "01. 百合.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -110,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01. 百合.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01. 百合.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "01. 百合.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -173,9 +140,9 @@
   },
   "active": "93445020ea32371d",
   "lastOpenFiles": [
+    "01. 百合.md",
     "03. 人生.md",
     "02. 兵器.md",
-    "01. 百合.md",
     "Obsidian_test.md",
     "2022-08-08.md"
   ]
