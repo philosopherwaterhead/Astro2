@@ -1,5 +1,5 @@
 ---
-title: test
+title: 所持合成音声ソフト一覧
 author: 外付け煮干
 description:
 ---
@@ -12,6 +12,7 @@ description:
 	- さとうささら
 	- すずきつづみ
 	- フィーちゃん
+	- 花隈千冬
 - VOICEROID+ EX
 	- 結月ゆかり 
 	- 東北きりたん
