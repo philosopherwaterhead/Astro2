@@ -1,0 +1,83 @@
+
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>公開進捗</title>
+    <style>
+        nav {
+            list-style: none;
+            overflow: hidden;
+            display: grid;
+            grid-auto-flow: column; /* 横並びにする */
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* 均等幅 */
+            gap: 1rem;
+            padding: 1rem;
+            background: #f0f0f0;
+            z-index: 1000;
+            width: 80%;
+            justify-content: center;
+            place-self: center;
+            }
+
+        nav li{
+            width: 140px;
+            text-align: center;
+            background-color: #8ebef2;
+            float: left;
+            height: 30px;
+            line-height: 30px;
+            margin-right: 2px;
+        }
+        nav li a{
+            text-decoration: none;
+            color: #000
+        }
+
+        .container {
+            display: grid;
+            grid-template-rows: auto 1fr;
+            grid-template-columns: 1fr 4fr;
+            min-height: 100vh;
+            margin: 0;
+        }
+        
+        nav {
+            grid-row: 1;
+            grid-column: 1 / -1; /* 全列に広げる */
+        }
+
+        .half {
+            grid-row: 2; /* コンテンツを2行目に配置 */
+        }
+
+        .left-half {
+            background-color: #202020;
+        }
+
+        .right-half {
+            background-color: #3d3d3d;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="/">▲TOP</a>
+            <a href="/smtop/">数理</a>
+            <a href="/lawstop/">法集</a>
+            <a href="/obsidiantop/">日記</a>
+            <a href="/gallery/">代理近影</a>
+            <a href="/sinchoku/">進捗</a>
+        </nav>
+
+        <div class="half left-half">
+
+        </div>
+        <div class="half right-half">
+
+        </div>
+    </div>
+</body>
+</html>

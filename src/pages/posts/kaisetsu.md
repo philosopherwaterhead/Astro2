@@ -1,4 +1,6 @@
-
+---
+layout: '/src/layouts/MarkdownLayout.astro'
+---
 
 **注意事項**
 

@@ -15,12 +15,20 @@ import "../styles/global.css"
             body {
                 margin-left: auto;
                 margin-right: auto;
-                width: 70%;
+                width: 80%;
+                background-color: aliceblue;
+                color: #333;
             }      
             
             nav {
                 list-style: none;
                 overflow: hidden;
+                display: grid;
+                grid-auto-flow: column; /* 横並びにする */
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* 均等幅 */
+                gap: 1rem;
+                padding: 1rem;
+                background: #f0f0f0;
             }
             nav li{
                 width: 140px;
@@ -52,7 +60,8 @@ import "../styles/global.css"
             <a href="/smtop/">数理</a>
             <a href="/lawstop/">法集</a>
             <a href="/obsidiantop/">日記</a>
-            <a href="/gallery/">代理近影集</a>
+            <a href="/gallery/">代理近影</a>
+            <a href="/sinchoku/">進捗</a>
         </nav>
 
         <slot /><!-- ここにコンテンツが挿入されます -->
