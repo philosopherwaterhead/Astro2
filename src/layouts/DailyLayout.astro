@@ -10,48 +10,76 @@ import "../styles/global.css"
 		<title>Comph-notes</title>
         <style>
             body {
-                margin-left: auto;
-                margin-right: auto;
+                margin: 0 auto;
                 width: 80%;
                 background-color: aliceblue;
                 color: #333;
-            }       
-
-            nav {
-                list-style: none;
-                overflow: hidden;
-                display: grid;
-                grid-auto-flow: column; /* 横並びにする */
-                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* 均等幅 */
-                gap: 1rem;
+            }
+        
+            /* ナビゲーションバー */
+            .navbar {
+                background: navy;
                 padding: 1rem;
-                background: #f0f0f0;
             }
-            nav li{
-                width: 140px;
-                text-align: center;
-                background-color: #8ebef2;
-                float: left;
-                height: 30px;
-                line-height: 30px;
-                margin-right: 2px;
+        
+            .nav-links {
+                display: grid;
+                grid-auto-flow: column;
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+                gap: 1rem;
+                list-style: none;
+                padding: 0;
+                margin: 0;
             }
-            nav li a{
+
+            .nav-links a {
+                font-family: sans-serif;
+                font-weight: bold;
+                color: #f0f0f0e8;
                 text-decoration: none;
-                color: #000
+                display: block;
+                text-align: center;
             }
-            hr{
+
+            /* ハンバーガーボタン */
+            .hamburger {
+                display: none;
+                cursor: pointer;
+                font-size: 1.5rem;
+                color: white;
+                background: none;
+                border: none;
+            }
+
+            /* スマホ向け */
+            @media (max-width: 768px) {
+                .nav-links {
+                    display: none;
+                    flex-direction: column;
+                    gap: 0;
+                }
+
+                .nav-links.active {
+                    display: flex;
+                }
+
+                .hamburger {
+                display: block;
+                }
+            }
+
+            hr {
                 border: none;
                 border-bottom: 1px solid #333;
                 margin: 0;
             }
-            span.yukari{
-                color:purple
-            }
-            span.kiritan{
-                color:orange
+            span.yukari {
+                color: purple;
             }
 
+            span.kiritan {
+                color: orange;
+            }
         </style>
 	</head>
     <body>
@@ -75,6 +103,17 @@ import "../styles/global.css"
                 <p>外付け煮干　<a href="https://github.com/philosopherwaterhead/comphand">GitHub</a></p>
             </small>
         </footer>
+        <script>
+            const hamburger = document.getElementById("hamburger");
+            const navLinks = document.getElementById("navLinks");
+      
+            if (hamburger && navLinks) {
+                hamburger.addEventListener("click", () => {
+                    navLinks.classList.toggle("active");
+                });
+                }
+        
+        </script>
     </body>
 
 </html>
