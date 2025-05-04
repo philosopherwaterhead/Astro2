@@ -1,0 +1,23 @@
+name: Release Obsidian Directory
+
+on:
+  push:
+    branches:
+      - release-obsidian
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Zip Obsidian directory
+        run: zip -r obsidian-release.zip src/pages/obsidian
+
+      - name: Upload Release Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: obsidian-release
+          path: obsidian-release.zip
