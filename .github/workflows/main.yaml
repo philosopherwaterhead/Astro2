@@ -17,7 +17,7 @@ jobs:
         run: zip -r obsidian-release.zip src/pages/obsidian
 
       - name: Upload Release Artifact
-        uses: actions/upload-pages-artifact@v3 # 明確なバージョンを指定
+        uses: actions/upload-pages-artifact@v3
         with:
           name: obsidian-release
           path: obsidian-release.zip
