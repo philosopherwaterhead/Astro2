@@ -3,7 +3,7 @@ name: Release Obsidian Directory
 on:
   push:
     branches:
-      - release-obsidian
+      - master
 
 jobs:
   build:
