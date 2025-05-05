@@ -1,5 +1,7 @@
 ---
 import BasicLayout from "../layouts/BasicLayout.astro";
+import { Image } from 'astro:assets';
+import fa from "../images/doronifa.png";
 ---
 
 <BasicLayout>
@@ -7,10 +9,15 @@ import BasicLayout from "../layouts/BasicLayout.astro";
 
     <h1>WORKS</h1>
 
-    寄稿・創作作品棟の掲示場所。工事中。
+    寄稿・創作作品棟の掲示場所。
+
+    <ol>
+      <li><a href="#High-Sky-Fields">寄稿1. High-Sky-Fields</a></li>
+      <li><a href="#miyasakanagi">MYCOE1. 宮坂ナギ</a></li>
+    </ol>
 
     <h2>寄稿</h2>
-    <h3>High-Sky-Fields</h3>
+    <h3 id="High-Sky-Fields">寄稿1. High-Sky-Fields</h3>
     <p>サークル「華想団」の会報vol.2(創作編)に寄稿。<br>軌道エレベーター「きざはし」がそびえる、そのふもとの人工島「中ノ島」の少女たちについて。本文は22ページある。</p>
     <table border="1">
       <tr>
@@ -18,6 +25,10 @@ import BasicLayout from "../layouts/BasicLayout.astro";
         <td><a href="manuscript.html">いますぐHTML版で読む</a></td>
       </tr>
     </table>
+
+    <h5>▼ Doroni氏によるHigh-Sky-FieldsのFA<a href="https://www.pixiv.net/artworks/129407068">『いいね、この島も』</a><br>（Doroni氏のpixivアカウントへのリンクは<a href="https://www.pixiv.net/users/38043914">こちら</a>） </h5>
+    <img src={fa.src} alt="Doroni氏によるFA『いいね、この島も』" width="420">
+    <br>
 
     <h4>High-Sky-Fields執筆後記つき版</h4>
     <p>本文は上と同じで、執筆後記が8ページある。執筆後記には、参考資料などや、執筆にあたって宇宙エレベータに関してまとめたものなどが書いてある。</p>
@@ -35,11 +46,7 @@ import BasicLayout from "../layouts/BasicLayout.astro";
         <td><a href="shiryou.html">いますぐHTML版で読む</a></td>
       </tr>
     </table>
-
     <br>
-    <br>
-    <br>
-
     <hr>
 
     <h4>◆High-Sky-Fieldsの二次創作等を行いたい方へ</h4>
@@ -49,6 +56,32 @@ import BasicLayout from "../layouts/BasicLayout.astro";
       <p>もしTwitter上でなら<a href="https://x.com/GainenHandler/status/1911739284156985351">広報ツイート</a>やわたしのTwitterアカウント(@GainenHandler)へのリンクを付けてもらえたりするとなおありがたいですが、必須ではありません。</p>
     </small>
  
+    <hr>
+    <br>
+
+    <h2>MYCOE</h2>
+    <h3 id="miyasakanagi">MYCOE1. 宮坂ナギ</h3>
+    <p>音声合成ソフトウェア『<a href="https://coeiroink.com">COEIROINK</a>』のユーザーモデルのひとつ。（<a href="https://ringo-amezaiku.booth.pm/items/5888297">配布先 Booth</a>）
+    <br><a href="https://cafe-hitotose.studio.site">喫茶春夏秋冬</a>の店員。ショートケーキと紅茶が好き。
+    <br>公式紹介ページは<a href="https://cafe-hitotose.studio.site/MiyasakaNagi">こちら</a>。
+    <br>
+    <h5>▼ しなさん(<a href="https://x.com/voca_sina">@voca_sina</a>)による宮坂ナギの公式イラスト。<br>公式紹介ページに、キャラクター紹介文、宮坂ナギのプロフィールと共に掲載されております。 </h5>
+    <Image src="https://pbs.twimg.com/media/GZ23hTLbcAE3dWr?format=jpg&name=large" alt="宮坂ナギ" width="256" height="384"/><Image src="https://pbs.twimg.com/media/GZ24dgdakAAMw-h?format=jpg&name=large" alt="宮坂ナギ" width="307" height="270"/>
+    
+    <p>FAや非公式立ち絵などもさまざま描いていただいております。<br>諸々を公式アカウントでも紹介しております。ありがとうございます。</p>
+
+
+    <hr>
+
+    <h4>◆宮坂ナギの二次創作等を行いたい方へ</h4>
+    <small>   
+      <p><b>宮坂ナギを含めた喫茶春夏秋冬プロジェクトのキャラクター、公式イラストや声は『林檎飴細工』および『喫茶春夏秋冬プロジェクト』が管理しています。<br><a href="https://cafe-hitotose.studio.site/GUIDELINE">公式ホームページのGUIDELINE</a>に基づいてご利用ください。</b></p>
+      <p><b>キャラクターの規約と声の規約は異なります。ご注意ください。</b></p>
+      <p>もしTwitter上でなら、上記GUIDELINEに則った利用に加え、ハッシュタグ「#喫茶春夏秋冬の来客ノート」（公式のFA等用ハッシュタグです）や「#宮坂ナギ」、あるいは宮坂ナギのTwitterアカウント(@miyasakanagi)へのリンクを付けてもらえたりするとうれしいです。</p>
+    </small>
+
+    <hr>
+    <br>
 
   </body>
 </BasicLayout>
