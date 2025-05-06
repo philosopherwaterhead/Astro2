@@ -14,10 +14,29 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Zip Obsidian directory
-        run: zip -r obsidian-release.zip src/pages/obsidian
+        run: |
+          mkdir -p artifacts
+          zip -r artifacts/obsidian-release.zip src/pages/obsidian
 
-      - name: Upload Release Artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Create GitHub Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          name: obsidian-release
-          path: obsidian-release.zip
+          tag_name: obsidian-release-${{ github.sha }}
+          release_name: Obsidian Release ${{ github.sha }}
+          body: |
+            This release contains the zipped contents of the Obsidian directory.
+          draft: false
+          prerelease: false
+
+      - name: Upload Release Asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: artifacts/obsidian-release.zip
+          asset_name: obsidian-release.zip
+          asset_content_type: application/zip
