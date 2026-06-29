@@ -14,11 +14,11 @@ type MdxModule = {
 };
 
 const modules = import.meta.glob<MdxModule>(
-  "../../content/calculations/**/*.mdx",
+  "../../content/calcs/**/*.mdx",
   { eager: true }
 );
 
-const path = `../../content/calculations/${id}.mdx`;
+const path = `../../content/calcs/${id}.mdx`;
 const entry = modules[path];
 
 if (!entry) {
