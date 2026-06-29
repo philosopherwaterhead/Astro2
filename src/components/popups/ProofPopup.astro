@@ -1,14 +1,28 @@
 ---
-// src/components/popups/ProofPopup.astro
 import PopupShell from "./PopupShell.astro";
 
-const { id, label = "証明" } = Astro.props;
+const {
+  id,
+  label = "証明",
+} = Astro.props;
 
-const modules = import.meta.glob("../../content/proofs/*.mdx", { eager: true });
-const entry = modules[`../../content/proofs/${id}.mdx`];
+type MdxModule = {
+  default: any;
+  frontmatter?: {
+    title?: string;
+  };
+};
+
+const modules = import.meta.glob<MdxModule>(
+  "../../content/proofs/**/*.mdx",
+  { eager: true }
+);
+
+const path = `../../content/proofs/${id}.mdx`;
+const entry = modules[path];
 
 if (!entry) {
-  throw new Error(`Proof not found: ${id}`);
+  throw new Error(`Proof popup not found: ${id}`);
 }
 
 const Content = entry.default;
