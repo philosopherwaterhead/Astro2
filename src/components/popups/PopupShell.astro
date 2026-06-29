@@ -1,0 +1,103 @@
+---
+// src/components/popups/PopupShell.astro
+const {
+  label = "?",
+  title = "補足",
+  kind = "popup",
+} = Astro.props;
+---
+
+<button type="button" class={`popup-trigger ${kind}`} data-popup-open>
+  {label}
+</button>
+
+<dialog class="popup-dialog" data-popup-dialog>
+  <article class={`popup-card ${kind}`}>
+    <button type="button" class="popup-close" data-popup-close aria-label="閉じる">
+      ×
+    </button>
+
+    <h2>{title}</h2>
+
+    <div class="popup-content">
+      <slot />
+    </div>
+  </article>
+</dialog>
+
+<script>
+  document.querySelectorAll("[data-popup-open]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const dialog = button.nextElementSibling;
+      if (dialog instanceof HTMLDialogElement) {
+        dialog.showModal();
+      }
+    });
+  });
+
+  document.querySelectorAll("[data-popup-close]").forEach((button) => {
+    button.addEventListener("click", () => {
+      button.closest("dialog")?.close();
+    });
+  });
+
+  document.querySelectorAll("[data-popup-dialog]").forEach((dialog) => {
+    dialog.addEventListener("click", (event) => {
+      if (event.target === dialog && dialog instanceof HTMLDialogElement) {
+        dialog.close();
+      }
+    });
+  });
+</script>
+
+<style>
+  .popup-trigger {
+    border: 1px solid currentColor;
+    border-radius: 999px;
+    padding: 0.05em 0.45em;
+    margin-inline: 0.2em;
+    font-size: 0.85em;
+    cursor: pointer;
+    background: transparent;
+  }
+
+  .popup-trigger.calc {
+    font-family: inherit;
+  }
+
+  .popup-dialog {
+    border: none;
+    border-radius: 16px;
+    padding: 0;
+    max-width: min(820px, 92vw);
+    max-height: 84vh;
+  }
+
+  .popup-dialog::backdrop {
+    background: rgb(0 0 0 / 0.45);
+  }
+
+  .popup-card {
+    padding: 1.5rem;
+    max-height: 84vh;
+    overflow: auto;
+  }
+
+  .popup-card h2 {
+    margin-top: 0;
+    padding-right: 2rem;
+  }
+
+  .popup-close {
+    float: right;
+    border: none;
+    background: transparent;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  .popup-content {
+    clear: both;
+  }
+</style>

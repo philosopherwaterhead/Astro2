@@ -1,0 +1,27 @@
+---
+// src/components/popups/CalcPopup.astro
+import PopupShell from "./PopupShell.astro";
+
+const {
+  id,
+  label = "計算",
+} = Astro.props;
+
+const modules = import.meta.glob("../../content/calculations/**/*.mdx", {
+  eager: true,
+});
+
+const path = `../../content/calculations/${id}.mdx`;
+const entry = modules[path];
+
+if (!entry) {
+  throw new Error(`Calculation popup not found: ${id}`);
+}
+
+const Content = entry.default;
+const title = entry.frontmatter?.title ?? id;
+---
+
+<PopupShell label={label} title={title} kind="calc">
+  <Content />
+</PopupShell>
