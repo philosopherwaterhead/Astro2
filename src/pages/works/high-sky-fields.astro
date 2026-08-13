@@ -1,0 +1,105 @@
+---
+import { Image } from "astro:assets";
+import BasicLayout from "../../layouts/BasicLayout.astro";
+import fa from "../../images/doronifa.png";
+---
+
+<BasicLayout>
+  <main>
+    <p><a href="/works/">← WORKS一覧へ</a></p>
+    <h1>High-Sky-Fields</h1>
+    <p>
+      サークル「華想団」の会報vol.2（創作編）に寄稿。軌道エレベーター「きざはし」がそびえる、そのふもとの人工島「中ノ島」の少女たちについて。本文は22ページある。
+    </p>
+
+    <section>
+      <h2>本文</h2>
+      <ul class="resource-links">
+        <li><a href="/works/High-Sky-Fields.pdf" download>PDFダウンロード（1.03MB）</a></li>
+        <li><a href="/works/manuscript.html">いますぐHTML版で読む</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>執筆後記つき版</h2>
+      <p>
+        本文は上と同じで、執筆後記が8ページある。執筆後記には、参考資料などや、執筆にあたって宇宙エレベータに関してまとめたものなどが書いてある。
+      </p>
+      <ul class="resource-links">
+        <li><a href="/works/High-Sky-Fields-additional.pdf" download>PDFダウンロード（2.26MB）</a></li>
+        <li><a href="/works/manuscript-additional.html">いますぐHTML版で読む</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>設定資料</h2>
+      <p>本文の背景である設定資料。こういうのを読むのが好きな人も居るかもしれない。</p>
+      <ul class="resource-links">
+        <li><a href="/works/shiryou.html">いますぐHTML版で読む</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>ファンアート</h2>
+      <p>
+        Doroni氏によるHigh-Sky-FieldsのFA
+        <a href="https://www.pixiv.net/artworks/129407068">『いいね、この島も』</a><br />
+        （Doroni氏のpixivアカウントへのリンクは<a href="https://www.pixiv.net/users/38043914">こちら</a>）
+      </p>
+      <Image src={fa} alt="Doroni氏によるFA『いいね、この島も』" width={520} />
+    </section>
+
+    <section class="guideline">
+      <h2>二次創作等を行いたい方へ</h2>
+      <p>
+        <strong>
+          High-Sky-Fieldsは「GainenHandler」による一次創作です。ライセンスは<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ja">CC BY-SA 4.0（表示-継承 4.0 国際）</a>に基づき、この作品の共有・翻案が自由に認められます。原作者クレジットの記載を求め、あなたが改変を行った際はその作品に同じライセンスの継承が行われることを求めます。
+        </strong>
+      </p>
+      <p>
+        二次創作を行いたいのであれば、あなたのイラストや小説やその他諸々の端に<strong>「原作: High-Sky-Fields　原著: GainenHandler　ライセンス: CC BY-SA 4.0」</strong>とでも書いておけばよいです。
+      </p>
+      <p>
+        もしTwitter上でなら<a href="https://x.com/GainenHandler/status/1911739284156985351">広報ツイート</a>やわたしのTwitterアカウント（@GainenHandler）へのリンクを付けてもらえたりするとなおありがたいですが、必須ではありません。
+      </p>
+    </section>
+
+    <p class="back-link"><a href="/works/">← WORKS一覧へ</a></p>
+  </main>
+</BasicLayout>
+
+<style>
+  main {
+    padding-bottom: 2rem;
+  }
+
+  section {
+    margin: 2rem 0;
+  }
+
+  .resource-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 0;
+    list-style: none;
+  }
+
+  .resource-links a {
+    display: block;
+    padding: 0.65rem 0.8rem;
+    border: 1px solid #718ca5;
+    border-radius: 0.3rem;
+    background: #fff;
+  }
+
+  .guideline {
+    padding-top: 1rem;
+    border-top: 1px solid #333;
+    font-size: 0.9rem;
+  }
+
+  .back-link {
+    margin-top: 2rem;
+  }
+</style>

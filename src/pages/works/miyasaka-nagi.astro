@@ -1,0 +1,88 @@
+---
+import { Image } from "astro:assets";
+import BasicLayout from "../../layouts/BasicLayout.astro";
+---
+
+<BasicLayout>
+  <main>
+    <p><a href="/works/">← WORKS一覧へ</a></p>
+    <h1>宮坂ナギ</h1>
+    <p>
+      音声合成ソフトウェア『<a href="https://coeiroink.com">COEIROINK</a>』のユーザーモデルのひとつ。（<a href="https://ringo-amezaiku.booth.pm/items/5888297">配布先 Booth</a>）
+      <br />
+      <a href="https://cafe-hitotose.studio.site">喫茶春夏秋冬</a>の店員。ショートケーキと紅茶が好き。
+      <br />
+      公式紹介ページは<a href="https://cafe-hitotose.studio.site/MiyasakaNagi">こちら</a>。
+    </p>
+
+    <section>
+      <h2>公式イラスト</h2>
+      <p>
+        しなさん（<a href="https://x.com/voca_sina">@voca_sina</a>）による宮坂ナギの公式イラスト。<br />
+        公式紹介ページに、キャラクター紹介文、宮坂ナギのプロフィールと共に掲載されております。
+      </p>
+      <div class="official-images">
+        <Image
+          src="https://pbs.twimg.com/media/GZ23hTLbcAE3dWr?format=jpg&name=large"
+          alt="宮坂ナギの公式イラスト"
+          width={256}
+          height={384}
+        />
+        <Image
+          src="https://pbs.twimg.com/media/GZ24dgdakAAMw-h?format=jpg&name=large"
+          alt="宮坂ナギの公式イラスト"
+          width={307}
+          height={270}
+        />
+      </div>
+      <p>
+        FAや非公式立ち絵などもさまざま描いていただいております。<br />
+        諸々を公式アカウントでも紹介しております。ありがとうございます。
+      </p>
+    </section>
+
+    <section class="guideline">
+      <h2>二次創作等を行いたい方へ</h2>
+      <p>
+        <strong>
+          宮坂ナギを含めた喫茶春夏秋冬プロジェクトのキャラクター、公式イラストや声は『林檎飴細工』および『喫茶春夏秋冬プロジェクト』が管理しています。<br />
+          <a href="https://cafe-hitotose.studio.site/GUIDELINE">公式ホームページのGUIDELINE</a>に基づいてご利用ください。
+        </strong>
+      </p>
+      <p><strong>キャラクターの規約と声の規約は異なります。ご注意ください。</strong></p>
+      <p>
+        もしTwitter上でなら、上記GUIDELINEに則った利用に加え、ハッシュタグ「#喫茶春夏秋冬の来客ノート」（公式のFA等用ハッシュタグです）や「#宮坂ナギ」、あるいは宮坂ナギのTwitterアカウント（@miyasakanagi）へのリンクを付けてもらえたりするとうれしいです。
+      </p>
+    </section>
+
+    <p class="back-link"><a href="/works/">← WORKS一覧へ</a></p>
+  </main>
+</BasicLayout>
+
+<style>
+  main {
+    padding-bottom: 2rem;
+  }
+
+  section {
+    margin: 2rem 0;
+  }
+
+  .official-images {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .guideline {
+    padding-top: 1rem;
+    border-top: 1px solid #333;
+    font-size: 0.9rem;
+  }
+
+  .back-link {
+    margin-top: 2rem;
+  }
+</style>
